@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 import type { CascaderProps } from 'ant-design-vue';
+import { creditmanagementPage } from "../api/home"
 defineProps<{ msg: string }>()
-
+onMounted(()=>{
+  creditmanagementPage({accountOrMobile:"15919689346",password: "c8508fee37755bfbf682d0ff9034ac2c"})
+})
 const count = ref(0)
 const value = reactive([])
 const options2: CascaderProps['options'] = [
@@ -42,7 +45,7 @@ const options2: CascaderProps['options'] = [
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <!-- <h1>{{ msg }}</h1> -->
   <a-cascader v-model:value="value" :options="options2" placeholder="Please select" />
 </template>
 

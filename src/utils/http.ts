@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 // import store from '../store'
 // import { router } from '@/router'
 // import { getLocalToken } from '@/utils/auth.js'
@@ -6,35 +6,35 @@ import axios from 'axios'
 
 const service = axios.create({
   timeout: 10000,
-  baseURL: process.env.VUE_APP_BASE_API
+  baseURL: (import.meta.env.VITE_BASE_API || '/api') as string,
 });
 service.interceptors.request.use(
   config => {
-    store.state.loading = true
-    let token = getLocalToken() || ''
+    // store.state.loading = true
+    // let token = getLocalToken() || ''
 
-    if (token) {
-      config.headers.common['token'] = token
-    }
+    // if (token) {
+      // config.headers.common['token'] = token
+    // }
     return config
   },
   error => {
     // do something with request error
-    store.state.loading = false //loading加载动画关闭
+    // store.state.loading = false //loading加载动画关闭
     // for debug
     return Promise.reject(error)
   }
 )
 
-const showTip = tip => {
-  Message({
+const showTip = (tip:string) => {
+  console.log({
     type: 'error',
     message: tip || '请求出错啦'
     // duration: 1500
   })
 }
 
-const handleResponse = response => {
+const handleResponse = (response: AxiosResponse<any, any>) => {
   const code = parseInt(response.data && response.data.code)
   // 没有对请求文件流做错误处理
   if (code !== 0 && response.config.responseType !== 'blob') {
@@ -46,16 +46,16 @@ const handleResponse = response => {
         break
       case 401:
         showTip(message)
-        store.commit('clear_token') //清token
+        //store.commit('clear_token') //清token
         // 为了重新实例化vue-router对象 避免bug
         if (location.pathname.indexOf('/login') === -1) {
-          router.push({
-            path: '/login'
-          })
+          // router.push({
+          //   path: '/login'
+          // })
         }
         break
       case 4001:
-        if (process.server) return
+        // if (process.server) return
         message = message || '登录设备数量超出限制'
         // store.commit('savehttpResult', { res: response.data })
         break
@@ -73,7 +73,7 @@ const handleResponse = response => {
         break
     }
     console.log(response.config)
-    if (!response.config.noTip) showTip(message)
+    // if (!response.config.noTip) showTip(message)
     // return {
     //   code,
     //   message
@@ -91,7 +91,7 @@ const handleResponse = response => {
   }
 }
 
-const handleError = err => {
+const handleError = (err: { message?: any; response: any; }) => {
   const { response } = err
 
   if (!response.status) {
@@ -110,9 +110,9 @@ const handleError = err => {
     case 403:
       err.message = '登陆过期，请重新登录(403)';
       var fullPath = location.pathname + location.search
-      router.push({
-        path: `/login?redirect=${window.__POWERED_BY_QIANKUN__ ? fullPath : fullPath.replace('/bciscmAssets', '')}`,
-      });
+      // router.push({
+      //   path: `/login?redirect=${window.__POWERED_BY_QIANKUN__ ? fullPath : fullPath.replace('/bciscmAssets', '')}`,
+      // });
       break
     case 404:
       err.message = '请求错误,未找到该资源(404)'
@@ -146,11 +146,11 @@ const handleError = err => {
 
 service.interceptors.response.use(
   response => {
-    store.state.loading = false
+    // store.state.loading = false
     return Promise.resolve(handleResponse(response))
   },
   err => {
-    store.state.loading = false
+    // store.state.loading = false
 
     if (!err) return Promise.reject(err)
 
