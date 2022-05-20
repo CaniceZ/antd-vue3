@@ -49,7 +49,12 @@ const options2: CascaderProps['options'] = [
   <a-cascader v-model:value="value" :options="options2" placeholder="Please select" />
 </template>
 
-<style scoped>
+<style lang="less" scoped>
+.a{
+  .b{
+    color:22
+  }
+}
 a {
   color: #42b983;
 }
