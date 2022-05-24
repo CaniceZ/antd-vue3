@@ -1,33 +1,38 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MyUser from '../views/user/MyUser.vue'
-import MyUser2 from '../views/user/MyUser2.vue'
-import System from '../views/system/System.vue'
-import System2 from '../views/system/System2.vue'
-import LayOut from '../components/layout.vue'
+const MyUser = () => import('../views/user/MyUser.vue')
+const MyUser2 = () => import('../views/user/MyUser2.vue')
+const System = () => import('../views/system/System.vue')
+const System2 = () => import('../views/system/System2.vue')
+const LayOut = () => import('../components/layout.vue')
 const routes = [
   {
     path: '/user',
     component: LayOut,
+    name: 'User',
     meta:{
       title: "用户管理"
     },
     children:[
       {
-        path: '/user/user-1',
+        path: 'user-1',
+        name: 'User1',
         component: MyUser,
         meta:{
-          title: "用户管理-1"
+          title: "用户管理-1",
+          keepAlive: true
         },
       },
       {
-        path: '/user/user-2',
+        path: 'user-2',
+        name: 'User2',
         component: MyUser2,
         meta:{
           title: "用户管理-2"
         },
       },
       {
-        path: '/user/user-3',
+        path: 'user-3',
+        name: 'User3',
         component: MyUser2,
         meta:{
           title: "用户管理-3",
@@ -38,23 +43,27 @@ const routes = [
   },
   {
     path: '/system',
+    name: 'System',
     component: LayOut,
     meta:{
       title: "系统管理"
     },
     children:[
       {
-        path: '/system/system-1',
+        path: 'system-1',
+        name: 'System1',
         component: System,
         meta:{
-          title: "用户管理-1"
+          title: "系统管理-1",
+          keepAlive: true
         },
       },
       {
-        path: '/system/system-2',
+        path: 'system-2',
+        name: 'System2',
         component: System2,
         meta:{
-          title: "用户管理-2"
+          title: "系统管理-2"
         },
       },
     ]
