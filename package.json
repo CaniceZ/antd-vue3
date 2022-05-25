@@ -34,7 +34,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
+    "src/**/*.{js,ts,vue}": [
       "eslint --cache",
       "git add"
     ]
