@@ -50,7 +50,7 @@
   const userRoutes2 = ref<any>(userRoutes)
   const router = useRouter()
   const route = useRoute()
-  const selectedKeys2 =ref([route.matched[1].path]) // 二级菜单
+  const selectedKeys2 =ref([route.matched[1].path.split('/')[route.matched[1].path.split('/').length-1]]) // 二级菜单
   const collapsed = ref<boolean>(false)
   const openKeys = ref([route.matched[0].path])  // 一级菜单
   const isKeepAlive = computed(() => {
