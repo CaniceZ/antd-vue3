@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "build:uat": "vue-tsc --noEmit && vite build --mode uat",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.2",
@@ -15,11 +16,27 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^17.0.30",
     "@vitejs/plugin-vue": "^2.3.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^11.0.0",
     "less": "^4.1.2",
     "typescript": "^4.5.4",
     "vite": "^2.9.5",
     "vue-tsc": "^0.34.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,vue}": [
+      "eslint --cache",
+      "git add"
+    ]
   }
 }
