@@ -27,6 +27,12 @@
     "vite": "^2.9.5",
     "vue-tsc": "^0.34.7"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --cache",
