@@ -12,7 +12,7 @@
           v-model:openKeys="openKeys"
           mode="inline"
           :style="{ height: '100%', borderRight: 0 }">
-           <a-sub-menu :key="item.path" v-for="item in userRoutes2">
+           <a-sub-menu :key="item.path" v-for="item in userRoutes2.filter((item3:any)=>!item3.meta.isHidden)">
             <template #title>
               <span>
                 <user-outlined />

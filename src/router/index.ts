@@ -6,6 +6,15 @@ const System2 = () => import('../views/system/System2.vue')
 const LayOut = () => import('../components/layout.vue')
 const routes = [
   {
+    path: '/',
+    name: 'home',
+    redirect: '/user/user-1',
+    meta:{
+      title: "主页",
+      isHidden: true
+    },
+  },
+  {
     path: '/user',
     component: LayOut,
     name: 'User',
