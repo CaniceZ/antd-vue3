@@ -3,16 +3,36 @@ const MyUser = () => import('../views/user/MyUser.vue')
 const MyUser2 = () => import('../views/user/MyUser2.vue')
 const System = () => import('../views/system/System.vue')
 const System2 = () => import('../views/system/System2.vue')
+const Luckydraw = () => import('../views/activity/Luckydraw.vue')
 const LayOut = () => import('../components/layout.vue')
 const routes = [
   {
     path: '/',
     name: 'home',
-    redirect: '/user/user-1',
+    redirect: '/activity/activity-1',
     meta:{
       title: "主页",
       isHidden: true
     },
+  },
+  {
+    path: '/activity',
+    component: LayOut,
+    name: 'Activity',
+    meta:{
+      title: "活动"
+    },
+    children:[
+      {
+        path: 'activity-1',
+        name: 'Activity1',
+        component: Luckydraw,
+        meta:{
+          title: "抽奖",
+          keepAlive: true
+        },
+      },
+    ]
   },
   {
     path: '/user',
