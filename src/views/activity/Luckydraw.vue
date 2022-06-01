@@ -1,4 +1,5 @@
 <template>
+  
   <div id="wheel" >
     <div class="big-wheel-box">
       <wheel 
@@ -17,75 +18,67 @@
     </div>
   </div>
 </template>
-<!-- <script lang="ts">
-  import { defineComponent } from 'vue';
-  export default defineComponent({
-    name: 'OutboundManageNoticeList',
-    data(){
-      return {
-      }
-    }
-  });
-</script> -->
 <script setup lang="ts">
-  import { ref,reactive } from 'vue';
+  import { ref, reactive, h } from 'vue';
+  import { SmileOutlined } from '@ant-design/icons-vue';
   import Wheel from '../../components/wheel/wheel.vue'
   import imgUrl from '@/assets/img/lucky-whell/bean_one.png'
   import goIconUrl from '@/assets/img/lucky-whell/go.png'
+  import { notification } from 'ant-design-vue';
   const initData = reactive({
     imgUrl,
     goIconUrl,
     isRunning: false
   })
   const dataSource = ref(<any>[
-        {
-          key: 'LD00',
-          name: '特等奖',
-          subtitle: 'Spark ticket',
-          remark: 'reserve',
-          url: '',
-          isShow: false
-        },
-        {
-          key: 'LD01',
-          name: '一等奖',
-          subtitle: 'Model x',
-          remark: '',
-          url: '',
-          isShow: false
-        },
-        {
-          key: 'LD02',
-          name: '二等奖',
-          subtitle: 'Model s',
-          remark: 'Rose Wang',
-          url: '',
-          isShow: false
-        },
-        {
-          key: 'LD03',
-          name: '三等奖',
-          subtitle: 'Model y',
-          remark: '',
-          url: '',
-          isShow: false
-        },
-        {
-          key: 'LD04',
-          name: '再来一次',
-          subtitle: '',
-          remark: '',
-          url: '',
-          isShow: false
-        },
-        {
-          key: 'LD05',
-          name: '抽了个寂寞',
-          subtitle: '',
-          remark: 'O(∩_∩)O哈哈~',
-          url: '',
-          isShow: false
-        },
+    {
+      key: 'LD00',
+      name: '特等奖',
+      subtitle: 'Spark ticket',
+      remark: 'reserve',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD01',
+      name: '一等奖',
+      subtitle: 'Model x',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD02',
+      name: '二等奖',
+      subtitle: 'Model s',
+      remark: 'Rose Wang',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD03',
+      name: '三等奖',
+      subtitle: 'Model y',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD04',
+      name: '再来一次',
+      subtitle: '',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD05',
+      name: '抽了个寂寞',
+      subtitle: '',
+      remark: 'O(∩_∩)O哈哈~',
+      url: '',
+      isShow: false
+    },
   ])
   const childWheel = ref(null)
   const go = ()=>{
@@ -99,8 +92,14 @@
       // 转动转盘
       childWheel.value.rotate(index)
   }
-  const openNotification = ()=>{
-    console.log("openNotification")
+  const openNotification = (prizeInfo: any)=>{
+    notification.open({
+      duration: null,
+      message: prizeInfo.name,
+      description: prizeInfo.subtitle,
+      icon: () => h(SmileOutlined, { style: 'color: #108ee9' }),
+      placement: 'topLeft'
+    });
     initData.isRunning = false
   }
 </script>
