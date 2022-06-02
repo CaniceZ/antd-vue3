@@ -4,12 +4,14 @@ const MyUser2 = () => import('../views/user/MyUser2.vue')
 const System = () => import('../views/system/System.vue')
 const System2 = () => import('../views/system/System2.vue')
 const Luckydraw = () => import('../views/activity/Luckydraw.vue')
+const Luckystar = () => import('../views/activity/Luckystar.vue')
 const LayOut = () => import('../components/layout.vue')
+const ActivityLayOut = () => import('../views/activity/index.vue')
 const routes = [
   {
     path: '/',
     name: 'home',
-    redirect: '/activity/activity-1',
+    redirect: '/activity/luck/luckdraw',
     meta:{
       title: "主页",
       isHidden: true
@@ -24,13 +26,30 @@ const routes = [
     },
     children:[
       {
-        path: 'activity-1',
-        name: 'Activity1',
-        component: Luckydraw,
+        path: 'luck',
+        name: 'ActivityLuck',
+        component: ActivityLayOut,
         meta:{
           title: "抽奖",
-          keepAlive: true
         },
+        children:[
+          {
+            path: 'luckdraw',
+            name: 'Luckdraw',
+            component: Luckydraw,
+            meta:{
+              title: "大转盘",
+            },
+          },
+          {
+            path: 'luckystar',
+            name: 'Luckystar',
+            component: Luckystar,
+            meta:{
+              title: "文字随机",
+            },
+          }
+        ]
       },
     ]
   },

@@ -16,7 +16,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { ref, reactive, onMounted } from "vue"
+  import { ref, reactive, onMounted, Ref } from "vue"
   const props = defineProps({
     prizeList: { // 奖品列表
       type: Array,
@@ -53,8 +53,8 @@
     rotateAngle: 'rotate(30deg)', // 设置指针默认指向的位置,现在是默认指向1个扇形中间，设置为0即指向两个扇形之间的线上
     rotateTransition: ''
   })
-  const canvas = ref(null)
-  const bigWheel = ref(null)
+  const canvas: Ref<any> = ref(null)
+  const bigWheel: Ref<any> = ref(null)
   // 初始化canvas
   const initData = ()=> {
     const prizeNum = props.prizeList.length

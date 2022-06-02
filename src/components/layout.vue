@@ -1,8 +1,10 @@
 <template>
   <a-layout>
     <a-layout-header class="header">
-      <div class="logo" />
-      <h3 style="color: #fff">g8系统</h3>
+      <div class="logo">
+        <img src="../assets/img/user.jpeg" alt="">
+      </div>
+      <h3 class="system-name">G8系统</h3>
     </a-layout-header>
     <a-layout>
       <a-layout-sider width="200" style="background: #fff">
@@ -42,7 +44,7 @@
   </a-layout>
 </template>
 <script lang="ts" setup name="LayOut">
-  import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons-vue';
+  import { UserOutlined } from '@ant-design/icons-vue';
   import { userRoutes } from '../router';
   import { ref, computed } from 'vue';
   import { useRouter, useRoute } from 'vue-router'
@@ -64,9 +66,29 @@
     // console.log(item, key, keyPath)
   }
 </script>
-<style>
+<style lang="less">
 .header{
   display: flex;
+  align-items: center;
+}
+.logo{
+  height: 45px;
+  width: 45px;
+  border-radius: 3px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.system-name {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 18px;
 }
 #components-layout-demo-top-side-2 .logo {
   float: left;

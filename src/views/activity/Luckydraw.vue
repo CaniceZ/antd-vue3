@@ -3,8 +3,8 @@
   <div id="wheel" >
     <div class="big-wheel-box">
       <wheel 
-        width="35rem"
-        height="35rem"
+        width="30rem"
+        height="30rem"
         ref="childWheel"
         :prizeList="dataSource"
         @over="openNotification"
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { ref, reactive, h } from 'vue';
+  import { ref, reactive, h, Ref } from 'vue';
   import { SmileOutlined } from '@ant-design/icons-vue';
   import Wheel from '../../components/wheel/wheel.vue'
   import imgUrl from '@/assets/img/lucky-whell/bean_one.png'
@@ -80,7 +80,7 @@
       isShow: false
     },
   ])
-  const childWheel = ref(null)
+  const childWheel: Ref<any> = ref(null)
   const go = ()=>{
      if (initData.isRunning) {
         return
@@ -108,7 +108,6 @@
 #wheel {
   position: relative;
   overflow: hidden;
-  width: 100vw;
   min-height: 200vh;
   background-repeat: no-repeat;
   background-position: center top;
