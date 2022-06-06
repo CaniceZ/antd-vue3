@@ -5,6 +5,7 @@ const System = () => import('../views/system/System.vue')
 const System2 = () => import('../views/system/System2.vue')
 const Luckydraw = () => import('../views/activity/Luckydraw.vue')
 const Luckystar = () => import('../views/activity/Luckystar.vue')
+const Luckycloud = () => import('../views/activity/Luckycloud.vue')
 const LayOut = () => import('../components/layout.vue')
 const ActivityLayOut = () => import('../views/activity/index.vue')
 const routes = [
@@ -48,7 +49,15 @@ const routes = [
             meta:{
               title: "文字随机",
             },
-          }
+          },
+          {
+            path: 'luckycloud',
+            name: 'Luckycloud',
+            component: Luckycloud,
+            meta:{
+              title: "cloud滚动",
+            },
+          },
         ]
       },
     ]
