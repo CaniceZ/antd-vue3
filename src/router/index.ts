@@ -28,6 +28,7 @@ const routes = [
     children:[
       {
         path: 'luck',
+        redirect: '/activity/luck/luckdraw',
         name: 'ActivityLuck',
         component: ActivityLayOut,
         meta:{

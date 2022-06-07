@@ -48,6 +48,8 @@
   import { userRoutes } from '../router';
   import { ref, computed } from 'vue';
   import { useRouter, useRoute } from 'vue-router'
+  import watermark from '../utils/watermark'
+  watermark.set("https://github.com/CaniceZ/antd-vue3")
   // import { RouteInter } from '../type/type'
   const userRoutes2 = ref<any>(userRoutes)
   const router = useRouter()
@@ -61,7 +63,7 @@
     }
     return route.meta.keepAlive
   })
-  const toRouter =({ keyPath })=>{
+  const toRouter =({ keyPath } : {keyPath: string[]})=>{
     router.push(keyPath.join("/"))
     // console.log(item, key, keyPath)
   }
