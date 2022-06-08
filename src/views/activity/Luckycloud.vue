@@ -538,7 +538,7 @@
 
       setTimeout(() => {
         onDraw()
-      }, 2000 * (obj.winnerCount < 3 || 3))
+      }, 2000 * (Number(obj.winnerCount < 3) || 3))
     }
     const start = ()=> {
       obj.isActive = !obj.isActive
@@ -576,8 +576,8 @@
       const canvas = document.createElement('canvas')
       canvas.width = 500
       canvas.height = 500
-      canvas.id = 'my_canvas'
-      document.querySelector('#cloud_main').appendChild(canvas)
+      canvas.id = 'my_canvas';
+      (document.querySelector('#cloud_main') as HTMLElement).appendChild(canvas)
     }
     const setTagCanvas = ()=> {
       createCanvas()
