@@ -15,9 +15,9 @@ let watermark:Watermark = {
         id = setWatermark(text, sourceBody)
       }
     }, 2000)
-    window.onresize = () => {
-      setWatermark(text, sourceBody)
-    }
+    // window.onresize = () => {
+    //   setWatermark(text, sourceBody)
+    // }
   }
 }
   
