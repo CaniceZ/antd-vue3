@@ -54,7 +54,13 @@
     isShow: boolean;
   }
   type ReactiveType = {
-    luckMember: Array<memberType>
+    imgUrl: string,
+    dataSource: Array<memberType>,
+    isShowAlert: boolean,
+    isRunning: boolean,
+    visible: boolean,
+    isActive: boolean,
+    luckMember: Array<memberType>,
     [key:string]:any
   }
   const obj = reactive<ReactiveType>({
@@ -113,7 +119,7 @@
     isRunning: false,
     visible: false,
     isActive: false,
-    randomMember:{},
+    randomMember: {},
     luckMember: []
   })
   const random2 = ()=> {
