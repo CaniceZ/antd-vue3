@@ -11,25 +11,25 @@ let watermark:Watermark = {
   set: (text, sourceBody) => {
     let id= setWatermark(text, sourceBody)
     setInterval(() => {
-      if (document.getElementById(id) === null) {
+      if (document.getElementsByClassName('ygpwater').length === 0) {
         id = setWatermark(text, sourceBody)
       }
     }, 2000)
-    // window.onresize = () => {
-    //   setWatermark(text, sourceBody)
-    // }
+    window.onresize = () => {
+      setWatermark(text, sourceBody)
+    }
   }
 }
   
 let setWatermark = (text: string, sourceBody?: HTMLElement) => {
   let id = Math.random()*10000+'-'+Math.random()*10000+'/'+Math.random()*10000
   
-  if (document.getElementById(id) !== null) {
-    document.body.removeChild(document.getElementById(id) as HTMLElement)
+  if (document.getElementsByClassName('ygpwater').length>0) {
+    document.body.removeChild(document.getElementsByClassName('ygpwater')[document.getElementsByClassName('ygpwater').length-1])
   }
   
   let can = document.createElement('canvas')
-  can.width = 270
+  can.width = 305
   can.height = 190
   
   let cans = can.getContext('2d') as CanvasRenderingContext2D
@@ -42,6 +42,7 @@ let setWatermark = (text: string, sourceBody?: HTMLElement) => {
   
   let water_div = document.createElement('div')
   water_div.id = id
+  water_div.className = 'ygpwater'
   water_div.style.pointerEvents = 'none'
   water_div.style.background = 'url(' + can.toDataURL('image/png') + ') left top repeat'
   if(sourceBody){
