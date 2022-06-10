@@ -10,11 +10,11 @@ let watermark:Watermark = {
    * */
   set: (text, sourceBody) => {
     let id= setWatermark(text, sourceBody)
-    setInterval(() => {
-      if (document.getElementsByClassName('ygpwater').length === 0) {
-        id = setWatermark(text, sourceBody)
-      }
-    }, 2000)
+    // setInterval(() => {
+    //   if (document.getElementsByClassName('ygpwater').length === 0) {
+    //     id = setWatermark(text, sourceBody)
+    //   }
+    // }, 2000)
     window.onresize = () => {
       setWatermark(text, sourceBody)
     }
@@ -58,8 +58,34 @@ let setWatermark = (text: string, sourceBody?: HTMLElement) => {
     water_div.style.height = document.documentElement.clientHeight  + 'px'
     document.body.appendChild(water_div)
   }
-  
+  monitor(water_div.getAttribute('style') as string, sourceBody as HTMLElement,text as string)
   return id
 }
-  
+function monitor(styleStr:string, sourceBody:HTMLElement, text: string) {
+  const parentNode = document.getElementsByClassName('ygpwater')[0]
+  const observer = new MutationObserver(() => {
+    const wmInstance = parentNode
+    if (((wmInstance && wmInstance.getAttribute('style') !== styleStr)|| !wmInstance.getAttribute('style'))) {
+      // 如果标签在，只修改了属性，重新赋值属性
+      if (wmInstance) {
+        // 避免一直触发
+        // observer.disconnect();
+        wmInstance.setAttribute('style', styleStr)
+      } else {
+        observer.disconnect()
+      }
+    }
+    if (document.getElementsByClassName('ygpwater').length === 0) {
+      setWatermark(text, sourceBody)
+    }
+  })
+  observer.observe(document.body, {
+    childList: true,
+    attributes: true,
+    characterData: false,
+    subtree: true,
+    attributeOldValue: false,
+    characterDataOldValue: false
+  }) // 监听body节点
+}
 export default watermark
