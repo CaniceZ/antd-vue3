@@ -21,7 +21,7 @@
 <script setup lang="ts">
   import { ref, reactive, h, Ref } from 'vue';
   import { SmileOutlined } from '@ant-design/icons-vue';
-  import Wheel from '../../components/wheel/wheel.vue'
+  import Wheel from '../../components/wheel'
   import imgUrl from '@/assets/img/lucky-whell/bean_one.png'
   import goIconUrl from '@/assets/img/lucky-whell/go.png'
   import { notification } from 'ant-design-vue';
