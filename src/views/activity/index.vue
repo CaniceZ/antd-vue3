@@ -21,7 +21,6 @@
     (val:any) => {
       if (val) {
         router.push(route.matched[1].path + '/' + val)
-        console.log(obj.current)
       }
     },
   );

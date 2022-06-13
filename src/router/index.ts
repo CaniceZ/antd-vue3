@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-const MyUser = () => import('../views/user/MyUser.vue')
+const MyUser = () => import('@/views/user/MyUser.vue')
 const MyUser2 = () => import('../views/user/MyUser2.vue')
 const System = () => import('../views/system/System.vue')
 const System2 = () => import('../views/system/System2.vue')
@@ -121,7 +121,7 @@ const routes = [
         name: 'System1',
         component: System,
         meta:{
-          title: "系统管理-1",
+          title: "http请求测试",
           keepAlive: true
         },
       },

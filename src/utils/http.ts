@@ -2,8 +2,7 @@ import axios, { AxiosResponse } from 'axios'
 // import store from '../store'
 // import { router } from '@/router'
 // import { getLocalToken } from '@/utils/auth.js'
-// import { Message } from 'element-ui'
-
+import { message } from 'ant-design-vue';
 const service = axios.create({
   timeout: 10000,
   baseURL: (import.meta.env.VITE_BASE_API || '/api') as string,
@@ -27,11 +26,7 @@ service.interceptors.request.use(
 )
 
 const showTip = (tip:string) => {
-  console.log({
-    type: 'error',
-    message: tip || '请求出错啦'
-    // duration: 1500
-  })
+  message.warning(tip || '请求出错啦')
 }
 
 const handleResponse = (response: AxiosResponse<any, any>) => {

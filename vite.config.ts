@@ -1,8 +1,8 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 // https://vitejs.dev/config/
-export default ({mode})=>{
+export default ({ mode }: ConfigEnv)=>{
   const baseApi = loadEnv(mode,process.cwd()).VITE_BASE_API // 请求主路径
   const reqHost = loadEnv(mode,process.cwd()).VITE_SERVICE_URL // 代理网址
   return defineConfig({
