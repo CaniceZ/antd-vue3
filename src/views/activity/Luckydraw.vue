@@ -30,7 +30,7 @@
     goIconUrl,
     isRunning: false
   })
-  const dataSource = ref(<any>[
+  const dataSource = ref(<memberType[]>[
     {
       key: 'LD00',
       name: '特等奖',

@@ -36,7 +36,15 @@
   import { reactive } from "vue" 
   import { message } from 'ant-design-vue';
   import { CheckCircleOutlined, UserOutlined } from '@ant-design/icons-vue';
-  const obj = reactive({
+  interface winnerType {
+    winner: string;
+    draw: string;
+  }
+  type ReactiveType = {
+    dataSource: Array<memberType>,
+    winnerList: Array<winnerType>,
+  }
+  const obj = reactive<ReactiveType>({
     dataSource: [
       {
           key: 'LD00',

@@ -9,7 +9,7 @@
           v-for="(item,index) in prizeList"
           :key="index"
           :style="_calcRotateAngle(index)">
-          <slot name="item" :item="item" />
+          <slot name="item" :item="(item as memberType)" />
         </div>
       </div>
     </div>
@@ -17,6 +17,14 @@
 </template>
 <script lang="ts" setup>
   import { ref, reactive, onMounted, Ref } from "vue"
+  interface memberType {
+    key: string;
+    name: string;
+    subtitle: string;
+    remark: string;
+    url: string;
+    isShow: boolean;
+  }
   const props = defineProps({
     prizeList: { // 奖品列表
       type: Array,

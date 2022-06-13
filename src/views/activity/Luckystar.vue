@@ -45,14 +45,6 @@
   import { notification, message } from 'ant-design-vue';
   import { SmileOutlined, DashboardOutlined } from '@ant-design/icons-vue';
   import imgUrl from '@/assets/img/logo.png'
-  interface memberType {
-    key: string;
-    name: string;
-    subtitle: string;
-    remark: string;
-    url: string;
-    isShow: boolean;
-  }
   type ReactiveType = {
     imgUrl: string,
     dataSource: Array<memberType>,
