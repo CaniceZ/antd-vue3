@@ -6,10 +6,10 @@
           sub-title="Ψ=Ψ（x，y，z，t）"
           @click="obj.showResult = false"
       >
-        <div v-for="(item, index) in obj.currentWinnerArr" :key="index" class="desc">
+        <div v-for="(item, index) in (obj.currentWinnerArr as memberType[])" :key="index" class="desc">
           <p :style="{ textAlign: 'center' }">
             <SmileOutlined :style="{ color: 'red', marginRight: '10px' }"></SmileOutlined>
-            <a :href="item.url || null">{{ item.name }}</a>
+            <a :href="(item.url as any as string)">{{ item.name }}</a>
           </p>
         </div>
       </a-result>
@@ -70,8 +70,8 @@
       nameStyle: {color: '#1890FF', fontSize: '15px'},
       normalSpeed: [0.1, 0.1],
       runSpeed: [2, 1],
-      historyWinnerArr: [],
-      currentWinnerArr: [],
+      historyWinnerArr: [] as Array<memberType>,
+      currentWinnerArr: [] as Array<memberType>,
       dataSource:[
         {
             key: '1',
@@ -563,7 +563,7 @@
           draws = tempArr.filter(item => !obj.historyWinnerArr.includes(item))
           draws = draws.filter(item => !obj.currentWinnerArr.includes(item))
         }
-        const index = parseInt(Math.random() * draws.length + 1, 10)
+        const index = parseInt((Math.random() * draws.length + 1)+'', 10)
         const winner = draws[index - 1]
         obj.currentWinnerArr.push(winner)
         obj.historyWinnerArr.push(winner)
