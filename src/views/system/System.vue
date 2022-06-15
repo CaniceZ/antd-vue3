@@ -1,6 +1,6 @@
 <template>
-    <h2>接口返回数据：</h2>
-    <div>{{text}}</div>
+  <h2>接口返回数据：</h2>
+  <div>{{text}}</div>
 </template>
 <script setup lang="ts">
 import {onMounted, ref} from "vue"

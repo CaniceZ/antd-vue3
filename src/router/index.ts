@@ -6,7 +6,7 @@ const System2 = () => import('../views/system/System2.vue')
 const Luckydraw = () => import('../views/activity/Luckydraw.vue')
 const Luckystar = () => import('../views/activity/Luckystar.vue')
 const Luckycloud = () => import('../views/activity/Luckycloud.vue')
-const Luckycard = () => import('../views/activity/Luckycard.vue')
+const Luckycard = () => import('../views/activity/lucky-card.vue')
 const LayOut = () => import('../components/layout.vue')
 const ActivityLayOut = () => import('../views/activity/index.vue')
 const routes = [
@@ -138,7 +138,6 @@ const routes = [
 ]
 
 const router = createRouter({
-  // @ts-ignored
   history: createWebHistory(),
   routes
 })

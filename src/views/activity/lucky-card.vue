@@ -13,7 +13,7 @@
             class="remark_item"
             allowClear
             placeholder="请输入获奖者"
-            @search="(value, event)=>onCommit(value, event, item)"
+            @search="(value: string, event: any)=>onCommit(value, event, item)"
         >
           <template #prefix>
             <user-outlined type="user" />
@@ -100,7 +100,7 @@
   const handleClick = (index:number)=>{
     obj.dataSource[index].isShow = true
   }
-   const onCommit=(value, e, item)=> {
+   const onCommit=(value: any, e: any, item: any)=> {
       let winItem = {winner: value, draw: item}
       obj.winnerList.push(winItem)
       message.success('已备注')
