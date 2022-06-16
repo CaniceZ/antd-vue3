@@ -5,7 +5,7 @@
 
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />2222 -->
-  <router-view></router-view>
+<router-view></router-view>
 </template>
 
 <style>
