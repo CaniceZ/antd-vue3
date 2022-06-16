@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
-import type { CascaderProps } from 'ant-design-vue';
-import { creditmanagementPage } from "../api/home"
+import { onMounted, reactive, ref } from 'vue'
+import type { CascaderProps } from 'ant-design-vue'
+import { creditmanagementPage } from '../api/home'
 defineProps<{ msg: string }>()
-onMounted(()=>{
-  creditmanagementPage({accountOrMobile:"15919689346",password: "c8508fee37755bfbf682d0ff9034ac2c"})
+onMounted(() => {
+  creditmanagementPage({
+    accountOrMobile: '15919689346',
+    password: 'c8508fee37755bfbf682d0ff9034ac2c'
+  })
 })
 const count = ref(0)
 const value = reactive([])
@@ -19,11 +22,11 @@ const options2: CascaderProps['options'] = [
         children: [
           {
             value: 'xihu',
-            label: 'West Lake',
-          },
-        ],
-      },
-    ],
+            label: 'West Lake'
+          }
+        ]
+      }
+    ]
   },
   {
     value: 'jiangsu',
@@ -35,24 +38,28 @@ const options2: CascaderProps['options'] = [
         children: [
           {
             value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-          },
-        ],
-      },
-    ],
-  },
-];
+            label: 'Zhong Hua Men'
+          }
+        ]
+      }
+    ]
+  }
+]
 </script>
 
 <template>
   <!-- <h1>{{ msg }}</h1> -->
-  <a-cascader v-model:value="value" :options="options2" placeholder="Please select" />
+  <a-cascader
+    v-model:value="value"
+    :options="options2"
+    placeholder="Please select"
+  />
 </template>
 
 <style lang="less" scoped>
-.a{
-  .b{
-    color:22
+.a {
+  .b {
+    color: 22;
   }
 }
 a {

@@ -29,29 +29,29 @@
   </a-form>
 </template>
 <script setup lang="ts" name="User1">
-import { reactive, toRaw, ref } from 'vue';
-import type { UnwrapRef } from 'vue';
-import {onMounted} from "vue"
-onMounted(()=>{
-    console.log('myuser2')
+import { reactive, toRaw, ref } from 'vue'
+import type { UnwrapRef } from 'vue'
+import { onMounted } from 'vue'
+onMounted(() => {
+  console.log('myuser2')
 })
 interface FormState {
-  name: string;
-  delivery: boolean;
-  type: string[];
-  resource: string;
-  desc: string;
+  name: string
+  delivery: boolean
+  type: string[]
+  resource: string
+  desc: string
 }
 const formState: UnwrapRef<FormState> = reactive({
-      name: '',
-      delivery: false,
-      type: [],
-      resource: '',
-      desc: '',
-    });
-    const labelCol=ref({ style: { width: '150px' } })
-    const wrapperCol=ref({ span: 14 } )
-    const onSubmit = () => {
-      console.log('submit!', toRaw(formState));
-    };
+  name: '',
+  delivery: false,
+  type: [],
+  resource: '',
+  desc: ''
+})
+const labelCol = ref({ style: { width: '150px' } })
+const wrapperCol = ref({ span: 14 })
+const onSubmit = () => {
+  console.log('submit!', toRaw(formState))
+}
 </script>

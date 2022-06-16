@@ -1,19 +1,27 @@
 <template>
   <div class="card-module">
-    <div v-for="(item, index) of obj.dataSource" :class="['img-box', {'active' : item.isShow}]" :key="index"
-          @click="handleClick(index)" :data-id='index'>
+    <div
+      v-for="(item, index) of obj.dataSource"
+      :class="['img-box', { active: item.isShow }]"
+      :key="index"
+      @click="handleClick(index)"
+      :data-id="index"
+    >
       <div class="back">
-        <a class="back_title">编号：{{ index +1 }}</a>
-        <img class="img-item" src='../../assets/img/luck-card/project_card_bg.png'/>
+        <a class="back_title">编号：{{ index + 1 }}</a>
+        <img
+          class="img-item"
+          src="../../assets/img/luck-card/project_card_bg.png"
+        />
       </div>
       <div class="front">
         <a class="title_item">{{ item.name }}</a>
         <a class="subtitle_item">{{ item.subtitle }}</a>
         <a-input-search
-            class="remark_item"
-            allowClear
-            placeholder="请输入获奖者"
-            @search="(value, event)=>onCommit(value, event, item)"
+          class="remark_item"
+          allowClear
+          placeholder="请输入获奖者"
+          @search="(value, event) => onCommit(value, event, item)"
         >
           <template #prefix>
             <user-outlined type="user" />
@@ -27,88 +35,91 @@
           </template>
         </a-input-search>
         <a class="id_item">*{{ item.key }}*</a>
-        <img class="img-item" src="../../assets/img/luck-card/card_win_bg.png"/>
+        <img
+          class="img-item"
+          src="../../assets/img/luck-card/card_win_bg.png"
+        />
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-  import { reactive } from "vue" 
-  import { message } from 'ant-design-vue';
-  import { CheckCircleOutlined, UserOutlined } from '@ant-design/icons-vue';
-  interface winnerType {
-    winner: string;
-    draw: string;
-  }
-  type ReactiveType = {
-    dataSource: Array<memberType>,
-    winnerList: Array<winnerType>,
-  }
-  const obj = reactive<ReactiveType>({
-    dataSource: [
-      {
-          key: 'LD00',
-          name: '特等奖',
-          subtitle: 'Spark ticket',
-          remark: 'reserve',
-          url: '',
-          isShow: false
-      },
-      {
-          key: 'LD01',
-          name: '一等奖',
-          subtitle: 'Model x',
-          remark: '',
-          url: '',
-          isShow: false
-      },
-      {
-          key: 'LD02',
-          name: '二等奖',
-          subtitle: 'Model s',
-          remark: 'Rose Wang',
-          url: '',
-          isShow: false
-      },
-      {
-          key: 'LD03',
-          name: '三等奖',
-          subtitle: 'Model y',
-          remark: '',
-          url: '',
-          isShow: false
-      },
-      {
-          key: 'LD04',
-          name: '再来一次',
-          subtitle: '',
-          remark: '',
-          url: '',
-          isShow: false
-      },
-      {
-          key: 'LD05',
-          name: '抽了个寂寞',
-          subtitle: '',
-          remark: 'O(∩_∩)O哈哈~',
-          url: '',
-          isShow: false
-      },
-    ],
-    winnerList:[]
-  })
-  const handleClick = (index:number)=>{
-    obj.dataSource[index].isShow = true
-  }
-   const onCommit=(value, e, item)=> {
-      let winItem = {winner: value, draw: item}
-      obj.winnerList.push(winItem)
-      message.success('已备注')
-      console.log(obj.winnerList)
+import { reactive } from 'vue'
+import { message } from 'ant-design-vue'
+import { CheckCircleOutlined, UserOutlined } from '@ant-design/icons-vue'
+interface winnerType {
+  winner: string
+  draw: string
+}
+type ReactiveType = {
+  dataSource: Array<memberType>
+  winnerList: Array<winnerType>
+}
+const obj = reactive<ReactiveType>({
+  dataSource: [
+    {
+      key: 'LD00',
+      name: '特等奖',
+      subtitle: 'Spark ticket',
+      remark: 'reserve',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD01',
+      name: '一等奖',
+      subtitle: 'Model x',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD02',
+      name: '二等奖',
+      subtitle: 'Model s',
+      remark: 'Rose Wang',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD03',
+      name: '三等奖',
+      subtitle: 'Model y',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD04',
+      name: '再来一次',
+      subtitle: '',
+      remark: '',
+      url: '',
+      isShow: false
+    },
+    {
+      key: 'LD05',
+      name: '抽了个寂寞',
+      subtitle: '',
+      remark: 'O(∩_∩)O哈哈~',
+      url: '',
+      isShow: false
     }
+  ],
+  winnerList: []
+})
+const handleClick = (index: number) => {
+  obj.dataSource[index].isShow = true
+}
+const onCommit = (value, e, item) => {
+  let winItem = { winner: value, draw: item }
+  obj.winnerList.push(winItem)
+  message.success('已备注')
+  console.log(obj.winnerList)
+}
 </script>
 <style lang="less" scoped>
-  .card-module {
+.card-module {
   margin: 2%;
   display: flex;
   flex-wrap: wrap;
@@ -216,4 +227,3 @@
   }
 }
 </style>
-

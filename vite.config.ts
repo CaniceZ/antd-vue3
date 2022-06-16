@@ -2,9 +2,9 @@ import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 // https://vitejs.dev/config/
-export default ({ mode }: ConfigEnv)=>{
-  const baseApi = loadEnv(mode,process.cwd()).VITE_BASE_API // 请求主路径
-  const reqHost = loadEnv(mode,process.cwd()).VITE_SERVICE_URL // 代理网址
+export default ({ mode }: ConfigEnv) => {
+  const baseApi = loadEnv(mode, process.cwd()).VITE_BASE_API // 请求主路径
+  const reqHost = loadEnv(mode, process.cwd()).VITE_SERVICE_URL // 代理网址
   return defineConfig({
     plugins: [vue()],
     resolve: {
@@ -12,11 +12,11 @@ export default ({ mode }: ConfigEnv)=>{
         '@': path.resolve(__dirname, 'src')
       }
     },
-    server:{
-      proxy:{
-        [baseApi] : {
+    server: {
+      proxy: {
+        [baseApi]: {
           target: reqHost,
-          changeOrigin: true,
+          changeOrigin: true
         }
       }
     },

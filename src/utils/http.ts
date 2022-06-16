@@ -2,18 +2,18 @@ import axios, { AxiosResponse } from 'axios'
 // import store from '../store'
 // import { router } from '@/router'
 // import { getLocalToken } from '@/utils/auth.js'
-import { message } from 'ant-design-vue';
+import { message } from 'ant-design-vue'
 const service = axios.create({
   timeout: 10000,
-  baseURL: (import.meta.env.VITE_BASE_API || '/api') as string,
-});
+  baseURL: (import.meta.env.VITE_BASE_API || '/api') as string
+})
 service.interceptors.request.use(
   config => {
     // store.state.loading = true
     // let token = getLocalToken() || ''
 
     // if (token) {
-      // config.headers.common['token'] = token
+    // config.headers.common['token'] = token
     // }
     return config
   },
@@ -25,7 +25,7 @@ service.interceptors.request.use(
   }
 )
 
-const showTip = (tip:string) => {
+const showTip = (tip: string) => {
   message.warning(tip || '请求出错啦')
 }
 
@@ -86,7 +86,7 @@ const handleResponse = (response: AxiosResponse<any, any>) => {
   }
 }
 
-const handleError = (err: { message?: any; response: any; }) => {
+const handleError = (err: { message?: any; response: any }) => {
   const { response } = err
 
   if (!response.status) {
@@ -103,8 +103,9 @@ const handleError = (err: { message?: any; response: any; }) => {
       err.message = '您没有此功能权限，如需开通，请联系管理员。'
       break
     case 403:
-      err.message = '登陆过期，请重新登录(403)';
-      var fullPath = location.pathname + location.search
+      err.message = '登陆过期，请重新登录(403)'
+      // const fullPath = location.pathname + location.search
+      // console.log(fullPath)
       // router.push({
       //   path: `/login?redirect=${window.__POWERED_BY_QIANKUN__ ? fullPath : fullPath.replace('/bciscmAssets', '')}`,
       // });
