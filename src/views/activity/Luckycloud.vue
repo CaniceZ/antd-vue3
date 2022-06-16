@@ -11,7 +11,7 @@
         :key="index"
         class="desc"
       >
-        <p :style="{ textAlign: 'center' }">
+          <p :style="{ textAlign: 'center' }">
           <SmileOutlined
             :style="{ color: 'red', marginRight: '10px' }"
           ></SmileOutlined>
