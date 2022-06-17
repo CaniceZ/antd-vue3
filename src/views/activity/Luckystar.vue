@@ -1,12 +1,12 @@
 <template>
   <a-alert
+    v-show="obj.isShowAlert"
     message="提示"
     description="选项不足"
     type="info"
     show-icon
     closable
     @close="obj.isShowAlert = false"
-    v-show="obj.isShowAlert"
   />
   <div class="content">
     <img :src="obj.randomMember.url || obj.imgUrl" style="border-radius: 5px" />
@@ -29,7 +29,7 @@
       type=""
       shape="round"
       size="large"
-      v-bind:class="{ active: obj.isActive, normal: !obj.isActive }"
+      :class="{ active: obj.isActive, normal: !obj.isActive }"
       :disabled="obj.isRunning"
       @click="start"
     >
@@ -41,7 +41,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { reactive, h, ref } from 'vue'
+import { reactive, h } from 'vue'
 import { notification, message } from 'ant-design-vue'
 import { SmileOutlined, DashboardOutlined } from '@ant-design/icons-vue'
 import imgUrl from '@/assets/img/logo.png'
@@ -132,11 +132,11 @@ const go = (isBreak: boolean) => {
     obj.visible = true
     obj.randomMember = {}
     return
-  } else if (lenght == 1) {
+  } else if (lenght === 1) {
     message.warning('只剩最后一个选项了!')
     obj.visible = true
     return
-  } else if (lenght == 2) {
+  } else if (lenght === 2) {
     obj.isShowAlert = true
   }
   let count = 0

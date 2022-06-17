@@ -2,10 +2,10 @@
   <div id="wheel">
     <div class="big-wheel-box">
       <wheel
+        ref="childWheel"
         width="30rem"
         height="30rem"
-        ref="childWheel"
-        :prizeList="dataSource"
+        :prize-list="dataSource"
         @over="openNotification"
       >
         <template #item="{ item }">
@@ -17,7 +17,7 @@
           />
         </template>
       </wheel>
-      <img class="btn-go" @click="go" :src="initData.goIconUrl" />
+      <img class="btn-go" :src="initData.goIconUrl" @click="go" />
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ const initData = reactive({
   goIconUrl,
   isRunning: false
 })
-const dataSource = ref(<memberType[]>[
+const dataSource = ref([
   {
     key: 'LD00',
     name: '特等奖',
@@ -82,7 +82,7 @@ const dataSource = ref(<memberType[]>[
     url: '',
     isShow: false
   }
-])
+] as memberType[])
 const childWheel: Ref<any> = ref(null)
 const go = () => {
   if (initData.isRunning) {

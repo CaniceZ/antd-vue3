@@ -12,6 +12,8 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
+    // 在表达式和声明上有隐含的 any类型时报错。
+    "noImplicitAny": false,
     "paths": {
       "@/*": ["src/*"] // 解决通过别名引入ts报错问题
     },

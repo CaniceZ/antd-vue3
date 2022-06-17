@@ -9,7 +9,7 @@ const watermark: Watermark = {
    *  @sourceBody == 水印添加在哪里，不传就是body
    * */
   set: (text, sourceBody) => {
-    const id = setWatermark(text, sourceBody)
+    setWatermark(text, sourceBody)
     // setInterval(() => {
     //   if (document.getElementsByClassName('ygpwater').length === 0) {
     //     id = setWatermark(text, sourceBody)

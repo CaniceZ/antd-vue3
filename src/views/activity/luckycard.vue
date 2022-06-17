@@ -2,10 +2,10 @@
   <div class="card-module">
     <div
       v-for="(item, index) of obj.dataSource"
-      :class="['img-box', { active: item.isShow }]"
       :key="index"
-      @click="handleClick(index)"
+      :class="['img-box', { active: item.isShow }]"
       :data-id="index"
+      @click="handleClick(index)"
     >
       <div class="back">
         <a class="back_title">编号：{{ index + 1 }}</a>
@@ -19,7 +19,7 @@
         <a class="subtitle_item">{{ item.subtitle }}</a>
         <a-input-search
           class="remark_item"
-          allowClear
+          allow-clear
           placeholder="请输入获奖者"
           @search="(value, event) => onCommit(value, event, item)"
         >

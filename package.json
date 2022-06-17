@@ -11,7 +11,8 @@
     "prepare": "yarn rm-husky-config && husky install && yarn precommit && yarn commitmsg",
     "commitmsg": "npx husky add .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'",
     "precommit": "npx husky add .husky/pre-commit 'npx lint-staged'",
-    "rm-husky-config": "rimraf .husky"
+    "rm-husky-config": "rimraf .husky",
+    "lint-eslint": "eslint \"*.{js,jsx,ts,tsx,vue}\" --fix && prettier \"*.{js,jsx,ts,tsx,vue}\" --write ."
   },
   "dependencies": {
     "ant-design-vue": "^3.2.2",

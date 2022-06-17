@@ -64,6 +64,7 @@ module.exports = {
     quotes: ['error', 'single'],
     'comma-dangle': ['error', 'never'],
     'vue/no-v-html': 'off',
-    'vue/no-deprecated-v-on-native-modifier': 'off'
+    'vue/no-deprecated-v-on-native-modifier': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }
