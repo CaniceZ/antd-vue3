@@ -9,15 +9,15 @@
     <a-layout>
       <a-layout-sider width="200" style="background: #fff">
         <a-menu
-          @click="toRouter"
           v-model:selectedKeys="selectedKeys2"
           v-model:openKeys="openKeys"
           mode="inline"
           :style="{ height: '100%', borderRight: 0 }"
+          @click="toRouter"
         >
           <a-sub-menu
-            :key="item.path"
             v-for="item in userRoutes2.filter((item3:any)=>!item3.meta.isHidden)"
+            :key="item.path"
           >
             <template #title>
               <span>
@@ -36,8 +36,8 @@
       <a-layout style="padding: 0 24px 24px">
         <a-breadcrumb style="margin: 16px 0; display: flex">
           <a-breadcrumb-item
-            :key="title"
             v-for="title in $route.matched.map(it => it.meta.title)"
+            :key="title"
             >{{ title }}</a-breadcrumb-item
           >
         </a-breadcrumb>
@@ -51,9 +51,9 @@
         >
           <router-view v-slot="{ Component, route }">
             <keep-alive>
-              <component v-if="isKeepAlive" :key="route.path" :is="Component" />
+              <component :is="Component" v-if="isKeepAlive" :key="route.path" />
             </keep-alive>
-            <component v-if="!isKeepAlive" :is="Component" />
+            <component :is="Component" v-if="!isKeepAlive" />
           </router-view>
         </a-layout-content>
       </a-layout>
@@ -74,7 +74,6 @@ const route = useRoute()
 const selectedKeys2 = ref([
   route.matched[1].path.split('/')[route.matched[1].path.split('/').length - 1]
 ]) // 二级菜单
-const collapsed = ref<boolean>(false)
 const openKeys = ref([route.matched[0].path]) // 一级菜单
 const isKeepAlive = computed(() => {
   if (route.meta.keepAlive === undefined) {

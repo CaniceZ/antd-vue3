@@ -14,6 +14,12 @@ export default ({ mode }: ConfigEnv) => {
     },
     server: {
       proxy: {
+        // '/api/bciscm': { // 单独代理某个耳机路径
+        //   target: 'http://10.172.5.227:9201',
+        //   changeOrigin: true,
+        //   ws: true,
+        //   rewrite: (path) => path.replace(/^\/api\/bciscm/, '')
+        // },
         [baseApi]: {
           target: reqHost,
           changeOrigin: true
