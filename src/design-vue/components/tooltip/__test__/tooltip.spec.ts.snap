@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`YTooltip > YTooltip render is ok? 1`] = `
+"<!--teleport start-->
+<!--teleport end-->
+<span class=\\"ant-tooltip-open\\">tooltip一直显示</span>"
+`;

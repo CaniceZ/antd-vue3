@@ -1,15 +1,29 @@
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 // https://vitejs.dev/config/
 export default ({ mode }: ConfigEnv) => {
   const baseApi = loadEnv(mode, process.cwd()).VITE_BASE_API // 请求主路径
   const reqHost = loadEnv(mode, process.cwd()).VITE_SERVICE_URL // 代理网址
   return defineConfig({
-    plugins: [vue()],
+    plugins: [
+      vue({
+        reactivityTransform: true
+      }),
+      vueJsx()
+    ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
+        '@': path.resolve(__dirname, 'src'),
+        '@design-vue': path.resolve(__dirname, 'src/desgin-vue')
+      }
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+          javascriptEnabled: true //注意，这一句是在less对象中，写在外边不起作用
+        }
       }
     },
     server: {

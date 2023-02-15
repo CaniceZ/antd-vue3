@@ -1,0 +1,199 @@
+// Vitest Snapshot v1
+
+exports[`SearchTable > SearchTable component YForm component render is ok 1`] = `
+"<div class=\\"ygp-search-table\\">
+  <!---->
+  <div class=\\"ygp-search-table-form\\">
+    <form class=\\"ant-form ant-form-horizontal ygp-form\\">
+      <div class=\\"ant-row ygp-row\\" style=\\"margin-left: -8px; margin-right: -8px;\\">
+        <!---->
+        <div class=\\"ant-col ant-col-6 ygp-col\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label for=\\"basic_realname\\" class=\\"\\" title=\\"\\"><span>姓名<!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\"><span class=\\"ant-input-affix-wrapper ygp-input\\"><!----><input placeholder=\\"设置\`newline: true\`换行\\" type=\\"text\\" id=\\"basic_realname\\" options=\\"\\" listtype=\\"link\\" class=\\"ant-input\\"><span class=\\"ant-input-suffix\\"><span role=\\"button\\" aria-label=\\"close-circle\\" tabindex=\\"-1\\" class=\\"anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon-has-suffix ant-input-clear-icon\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"close-circle\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z\\"></path></svg></span>
+                  <!----></span></span>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div class=\\"ant-col ant-col-24\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <!---->
+        </div>
+        <!---->
+        <div class=\\"ant-col ant-col-24 ygp-col\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label for=\\"basic_password\\" class=\\"\\" title=\\"\\"><span>密码<!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\"><span class=\\"ant-input-affix-wrapper ygp-input\\"><!----><input placeholder=\\"请输入\\" type=\\"text\\" id=\\"basic_password\\" options=\\"\\" listtype=\\"link\\" class=\\"ant-input\\"><span class=\\"ant-input-suffix\\"><span role=\\"button\\" aria-label=\\"close-circle\\" tabindex=\\"-1\\" class=\\"anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon-has-suffix ant-input-clear-icon\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"close-circle\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z\\"></path></svg></span>
+                  <!----></span></span>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div class=\\"ant-col ant-col-24\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <!---->
+        </div>
+        <!---->
+        <div class=\\"ant-col ant-col-24 ygp-col\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label for=\\"basic_confirmPassword\\" class=\\"\\" title=\\"\\"><span>确认密码<!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\"><span class=\\"ant-input-affix-wrapper ygp-input\\"><!----><input placeholder=\\"请输入\\" type=\\"text\\" id=\\"basic_confirmPassword\\" options=\\"\\" listtype=\\"link\\" class=\\"ant-input\\"><span class=\\"ant-input-suffix\\"><span role=\\"button\\" aria-label=\\"close-circle\\" tabindex=\\"-1\\" class=\\"anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon-has-suffix ant-input-clear-icon\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"close-circle\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z\\"></path></svg></span>
+                  <!----></span></span>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div class=\\"ant-col ant-col-24\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <!---->
+        </div>
+        <!---->
+        <div class=\\"ant-col ant-col-24 ygp-col\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label for=\\"basic_password1\\" class=\\"\\" title=\\"\\"><span>密码1<!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\"><span class=\\"ant-input-affix-wrapper ygp-input\\"><!----><input placeholder=\\"请输入\\" type=\\"text\\" id=\\"basic_password1\\" options=\\"\\" listtype=\\"link\\" class=\\"ant-input\\"><span class=\\"ant-input-suffix\\"><span role=\\"button\\" aria-label=\\"close-circle\\" tabindex=\\"-1\\" class=\\"anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon-has-suffix ant-input-clear-icon\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"close-circle\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z\\"></path></svg></span>
+                  <!----></span></span>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div class=\\"ant-col ant-col-24\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <!---->
+        </div>
+        <!---->
+        <div class=\\"ant-col ant-col-24 ygp-col\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label for=\\"basic_confirmPassword1\\" class=\\"\\" title=\\"\\"><span>确认密码1<!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\"><span class=\\"ant-input-affix-wrapper ygp-input\\"><!----><input placeholder=\\"请输入\\" type=\\"text\\" id=\\"basic_confirmPassword1\\" options=\\"\\" listtype=\\"link\\" class=\\"ant-input\\"><span class=\\"ant-input-suffix\\"><span role=\\"button\\" aria-label=\\"close-circle\\" tabindex=\\"-1\\" class=\\"anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon-has-suffix ant-input-clear-icon\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"close-circle\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z\\"></path></svg></span>
+                  <!----></span></span>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div class=\\"ant-col ant-col-24\\" style=\\"padding-left: 8px; padding-right: 8px;\\">
+          <!---->
+        </div>
+      </div>
+      <div class=\\"ant-row ygp-row\\">
+        <div class=\\"action_box\\">
+          <div class=\\"ant-row ant-form-item ygp-form-item\\" trigger=\\"change\\">
+            <div class=\\"ant-col ant-form-item-label\\" style=\\"width: 120px;\\"><label class=\\"ant-form-item-no-colon\\" title=\\"\\"><span> <!----></span>
+                <!---->
+              </label></div>
+            <div class=\\"ant-col ant-form-item-control\\">
+              <div class=\\"ant-form-item-control-input\\">
+                <div class=\\"ant-form-item-control-input-content\\">
+                  <div>
+                    <div class=\\"ant-space ant-space-horizontal ant-space-align-center ygp-space\\">
+                      <div class=\\"ant-space-item\\" style=\\"margin-right: 8px;\\"><button class=\\"ant-btn ant-btn-primary ygp-btn\\" type=\\"button\\">
+                          <transition-stub name=\\"ant-btn-loading-icon-motion\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+                            <!---->
+                          </transition-stub><span>查 询</span>
+                        </button></div>
+                      <!---->
+                      <div class=\\"ant-space-item\\" style=\\"margin-right: 8px;\\">
+                        <!---->
+                      </div>
+                      <!---->
+                      <div class=\\"ant-space-item\\" style=\\"margin-right: 8px;\\"><button class=\\"ant-btn ant-btn-link ygp-btn\\" type=\\"button\\">
+                          <transition-stub name=\\"ant-btn-loading-icon-motion\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+                            <!---->
+                          </transition-stub><span>重置筛选条件</span>
+                        </button></div>
+                      <!---->
+                      <div class=\\"ant-space-item\\"><button class=\\"ant-btn ant-btn-link ygp-btn\\" type=\\"button\\">
+                          <transition-stub name=\\"ant-btn-loading-icon-motion\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+                            <!---->
+                          </transition-stub><span>收起</span><span role=\\"img\\" aria-label=\\"up\\" class=\\"anticon anticon-up\\"><svg focusable=\\"false\\" class=\\"\\" data-icon=\\"up\\" width=\\"1em\\" height=\\"1em\\" fill=\\"currentColor\\" aria-hidden=\\"true\\" viewBox=\\"64 64 896 896\\"><path d=\\"M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z\\"></path></svg></span>
+                        </button></div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class=\\"ygp-search-table-tabs\\">
+    <div class=\\"slot-tabs\\">这是自定义tabs的插槽</div>
+  </div>
+  <div class=\\"ygp-search-table-content\\">
+    <div class=\\"slot-table\\">这是自定义table的插槽</div>
+  </div>
+</div>"
+`;
+
+exports[`SearchTable > SearchTable component YTable component render is ok 1`] = `
+"<div class=\\"ygp-search-table\\">
+  <!---->
+  <div class=\\"ygp-search-table-form\\">
+    <div class=\\"slot-table\\">这是自定义table的插槽</div>
+  </div>
+  <div class=\\"ygp-search-table-tabs\\">
+    <div class=\\"slot-tabs\\">这是自定义tabs的插槽</div>
+  </div>
+  <div class=\\"ygp-search-table-content\\">
+    <y-table-stub data=\\"[object Object]\\" middle=\\"false\\" large=\\"false\\" propmap=\\"[object Object]\\" ellipsis=\\"false\\" bordered=\\"false\\" nopagination=\\"false\\" editable=\\"false\\" configthead=\\"false\\" seq=\\"false\\" defaultexpandallrows2=\\"false\\" nohover=\\"false\\" noresize=\\"false\\" fit=\\"false\\" rowkey=\\"id\\" columns=\\"[object Object]\\"></y-table-stub>
+  </div>
+</div>"
+`;
+
+exports[`SearchTable > SearchTable component table and form component slot render is ok 1`] = `
+"<div class=\\"ygp-search-table\\">
+  <!---->
+  <div class=\\"ygp-search-table-form\\">
+    <div class=\\"slot-form\\">这是自定义form的插槽</div>
+  </div>
+  <div class=\\"ygp-search-table-tabs\\">
+    <div class=\\"slot-tabs\\">这是自定义tabs的插槽</div>
+  </div>
+  <div class=\\"ygp-search-table-content\\">
+    <div class=\\"slot-table\\">这是自定义table的插槽</div>
+  </div>
+</div>"
+`;

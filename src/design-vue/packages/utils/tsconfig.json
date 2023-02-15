@@ -1,0 +1,10 @@
+{
+  // "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // "@ygp/ygp-design-vue": ["../../src"]
+    }
+  },
+  "exclude": ["../../src"]
+}

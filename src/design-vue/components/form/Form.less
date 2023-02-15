@@ -1,0 +1,36 @@
+.ygp-form {
+  &.ygp-form-no-explain {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-explain {
+      display: none;
+    }
+  }
+  &.ant-form-horizontal .ant-form-item-control {
+    min-width: 0;
+  }
+
+  .action_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ygp-form-item {
+    & > .ant-form-item-control {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+
+  &-compact {
+    .ygp-form-item {
+      margin-bottom: 16px;
+      & > .ant-form-item-label > label,
+      & > .ant-form-item-control > div {
+        min-height: unset;
+      }
+    }
+  }
+}

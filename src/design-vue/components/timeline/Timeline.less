@@ -1,0 +1,27 @@
+.ygp-timeline {
+  &-couple {
+    .ant-timeline-item-content {
+      left: 0 !important;
+      width: 100% !important;
+      text-align: unset !important;
+      margin-left: 0 !important;
+    }
+    .ygp-timeline-item-left {
+      flex: var(--timeline-leftFlex);
+      width: var(--timeline-leftWidth);
+      min-width: 0;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .ygp-timeline-item-right {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+      padding-left: 20px;
+    }
+    .ant-timeline-item-tail,
+    .ant-timeline-item-head {
+      left: var(--timeline-leftWidth) !important;
+    }
+  }
+}

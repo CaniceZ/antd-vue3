@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`YTag > this is ACheckableTag Component checked 1`] = `"<span class=\\"ant-tag ant-tag-checkable ant-tag-checkable-checked ygp-tag\\"></span>"`;
+
+exports[`YTag > this is Tag Component label 1`] = `"<span class=\\"ant-tag ygp-tag\\">tag1<!----></span>"`;
+
+exports[`YTag > this is Tag Component slot 1`] = `"<span class=\\"ant-tag ygp-tag\\">tag2<!----></span>"`;

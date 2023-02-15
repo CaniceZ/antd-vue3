@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`YTag > is create ATimePicker 1`] = `"<a-time-picker-stub valueformat=\\"HH:mm:ss\\" class=\\"ygp-time\\"></a-time-picker-stub>"`;
+
+exports[`YTag > is create ATimePicker 2`] = `"<a-time-range-picker-stub valueformat=\\"HH:mm:ss\\" disabled=\\"false\\" order=\\"true\\" class=\\"ygp-time-range\\"></a-time-range-picker-stub>"`;

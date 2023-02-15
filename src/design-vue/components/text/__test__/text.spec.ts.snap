@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`YTag > this Text Component is ATypographyText 1`] = `"<span class=\\"ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line ygp-text\\" style=\\"width: 100px;\\">易工品测试<!----></span>"`;
+
+exports[`YTag > this is Text Component have level 1`] = `
+"<h1 class=\\"ant-typography ygp-text\\">123
+  <!---->
+</h1>"
+`;

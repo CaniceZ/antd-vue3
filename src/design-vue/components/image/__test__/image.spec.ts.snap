@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`YImage > Image component fallback and slot is ok? 1`] = `
+"<div class=\\"ant-image\\"><img class=\\"ant-image-img ygp-image\\" src=\\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\\">
+  <!---->
+  <div class=\\"ant-image-mask\\">
+    <div class=\\"preview-mask-slot\\">123</div>
+  </div>
+</div>"
+`;
+
+exports[`YImage > ImageGroup component render is ok? 1`] = `
+"<a-image-preview-group-stub class=\\"ygp-image-preview-group\\">
+  <y-image-stub src=\\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\\"></y-image-stub>
+</a-image-preview-group-stub>"
+`;

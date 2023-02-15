@@ -1,0 +1,50 @@
+.ygp-btn {
+  &.ant-btn[disabled] {
+    color: #c8c9cc;
+    border-color: #ebedf0;
+  }
+
+  // .ant-btn:focus {
+  //   background: #eaeaea;
+  //   border: 1px solid #dcdee0;
+  //   color: #323233;
+  // }
+
+  &.ant-btn.ant-btn-loading {
+    .anticon-loading {
+      svg {
+        color: #fe5f23;
+      }
+    }
+  }
+
+  &.ant-btn-primary.ant-btn-loading {
+    .anticon-loading {
+      svg {
+        color: #fff;
+      }
+    }
+  }
+
+  &.ant-btn-primary:focus {
+    background-color: #e94000;
+    border-color: #e94000;
+  }
+
+  &.ant-btn-link[disabled] {
+    border-color: transparent;
+  }
+
+  &.ant-btn-dangerous.ant-btn-link:hover,
+  &.ant-btn-dangerous.ant-btn-link:focus {
+    // color: #e02a24;
+    // background: #f2f3f5;
+    background: #e02a24;
+    color: white;
+  }
+
+  &.ant-btn-link {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

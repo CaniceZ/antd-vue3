@@ -1,0 +1,82 @@
+.ygp-pagination {
+  &.ant-pagination {
+    .ant-pagination-item {
+      margin-right: 4px;
+
+      &:focus {
+        background: #ff6720;
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-pagination-item-active {
+      font-weight: 500;
+      background: #ff6720;
+
+      a {
+        color: #fff;
+      }
+
+      &:hover {
+        background: #ff6720;
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-jump-prev,
+    .ant-pagination-jump-next {
+      margin-right: 4px;
+    }
+
+    .ant-pagination-options {
+      margin-left: 8px;
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      padding: 0 8px;
+    }
+    .ant-pagination-options-quick-jumper input {
+      padding: 4px 8px;
+      width: 46px;
+    }
+
+    &.no_border {
+      .ant-pagination-item {
+        border-color: transparent;
+        margin-right: 0;
+      }
+
+      .ant-pagination-prev,
+      .ant-pagination-jump-prev,
+      .ant-pagination-jump-next {
+        margin-right: 0;
+      }
+
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        border-color: transparent;
+      }
+    }
+
+    &.ant-pagination-simple {
+      .ant-pagination-prev,
+      .ant-pagination-next {
+        height: 32px;
+        line-height: 32px;
+      }
+
+      .ant-pagination-simple-pager {
+        height: 32px;
+
+        input {
+          width: 56px;
+        }
+      }
+    }
+  }
+}
