@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
 // import store from '../store'
-// import { router } from '@/router'
+import router from '@/router'
 // import { getLocalToken } from '@/utils/auth.js'
 import { message } from 'ant-design-vue'
 const service = axios.create({
@@ -10,11 +10,13 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // store.state.loading = true
-    // let token = getLocalToken() || ''
+    const token = localStorage.getItem('userInfo')
+      ? JSON.parse(localStorage.getItem('userInfo'))?.token
+      : ''
 
-    // if (token) {
-    // config.headers.common['token'] = token
-    // }
+    if (token) {
+      config.headers.common['token'] = token
+    }
     return config
   },
   error => {
@@ -67,12 +69,12 @@ const handleResponse = (response: AxiosResponse<any, any>) => {
         // message = message || err.response.data.msg
         break
     }
-    console.log(response.config)
-    // if (!response.config.noTip) showTip(message)
-    // return {
-    //   code,
-    //   message
-    // }
+    // console.log(response.config)
+    if (!response.config.noTip) showTip(message)
+    return {
+      code,
+      message
+    }
   }
   const status = response.status
   // 如果http响应状态码response.status正常，则直接返回数据
@@ -106,9 +108,9 @@ const handleError = (err: { message?: any; response: any }) => {
       err.message = '登陆过期，请重新登录(403)'
       // const fullPath = location.pathname + location.search
       // console.log(fullPath)
-      // router.push({
-      //   path: `/login?redirect=${window.__POWERED_BY_QIANKUN__ ? fullPath : fullPath.replace('/bciscmAssets', '')}`,
-      // });
+      router.push({
+        path: '/login'
+      })
       break
     case 404:
       err.message = '请求错误,未找到该资源(404)'

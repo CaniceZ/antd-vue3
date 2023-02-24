@@ -56,7 +56,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'space-before-function-paren': 'off',
     quotes: ['error', 'single'],
-    'comma-dangle': ['error', 'never'],
+    // 'comma-dangle': ['error', 'never'],
     'vue/no-v-html': 'off',
     'vue/no-deprecated-v-on-native-modifier': 'off',
     'vue/multi-word-component-names': 'off'
