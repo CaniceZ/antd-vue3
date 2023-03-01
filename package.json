@@ -9,7 +9,7 @@
     "build:uat": "vite build --mode uat",
     "preview": "vite preview",
     "start": "http-server ./dist -p 3109 --cors",
-    "prepare": "yarn rm-husky-config && husky install && yarn precommit && yarn commitmsg",
+    "prepare": "npm run rm-husky-config && husky install && npm run precommit && npm run commitmsg",
     "commitmsg": "npx husky add .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'",
     "precommit": "npx husky add .husky/pre-commit 'npx lint-staged'",
     "rm-husky-config": "rimraf .husky",
